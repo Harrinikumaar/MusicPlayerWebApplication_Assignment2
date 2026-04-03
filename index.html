@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonicStream | Dark Mode Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <aside class="sidebar">
+            <h2 class="logo">Sonic<span>Stream</span></h2>
+            <nav>
+                <div class="nav-item active">🏠 Home</div>
+                <div class="nav-item">❤️ Favorites</div>
+                <div class="nav-item">📊 Stats</div>
+            </nav>
+            
+            <div class="recent-section">
+                <h3>Recently Played</h3>
+                <ul id="recentList" class="recent-list"></ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <input type="text" id="searchBar" placeholder="Search by song or artist...">
+                <div class="filters">
+                    <select id="genreFilter">
+                        <option value="all">All Genres</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Lo-fi">Lo-fi</option>
+                        <option value="Electronic">Electronic</option>
+                    </select>
+                    <button class="btn-sort" onclick="toggleSort()">Sort A-Z</button>
+                </div>
+            </header>
+
+            <div id="songGrid" class="song-grid">
+                </div>
+        </main>
+
+        <footer class="player-bar" id="nowPlayingSection">
+            <div class="current-track-info">
+                <div class="mini-cover" id="miniCover"></div>
+                <div class="track-text">
+                    <h4 id="nowPlayingTitle">Select a song</h4>
+                    <p id="nowPlayingArtist">-</p>
+                </div>
+            </div>
+            <div class="player-controls">
+                <span>⏮</span> <span class="play-btn">▶</span> <span>⏭</span>
+            </div>
+            <div class="track-stats">
+                <span id="playCountLabel">Plays: 0</span>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
